@@ -1,6 +1,6 @@
 class NotificationsMailer < ActionMailer::Base
 
-  default :from => "noreply@localhost:3000"
+  default :from => "noreply@whispering-savannah-8378.herokuapp.com"
   default :to => "beta@bizroller.com"
 
   def new_message(message)
