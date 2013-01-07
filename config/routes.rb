@@ -4,7 +4,11 @@ Omrails::Application.routes.draw do
 
   root :to => 'static_pages#home'
   get "about" => "static_pages#about"
-  get "contact" => "static_pages#contact"
+
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+
+  # get "contact" => "static_pages#contact"
  
 
   # The priority is based upon order of creation:

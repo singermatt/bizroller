@@ -13,3 +13,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore Development Gmail send settings
+/config/initializers/development_gmail_send_setup_mail.rb
+/config/initializers/production_sendgrid_setup_mail.rb
+# /config/initializers/setup_mail.rb
