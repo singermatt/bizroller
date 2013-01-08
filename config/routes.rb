@@ -3,6 +3,7 @@ Omrails::Application.routes.draw do
   devise_for :users
 
   root :to => 'static_pages#home'
+
   get "about" => "static_pages#about"
 
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
