@@ -1,6 +1,28 @@
 <% if user_signed_in? %>
-	<h1>You Are Signed In</h1>
+	<h2>Thanks for signing up for the beta</h2>
+
+    <div class="center hero-unit">
+<p>
+    <%= image_tag("Bizrollerlogowithtagline.png") %>
+
+
+</p>
+    
+  <h4>Created by and for Business Travelers, BizRoller is the one place for connecting to other Business Travelers and getting focused reviews on everything from conferences, restaurants, meetings, hotels, sports, theater, entertainment, attractions, performances and support services. Looking for a business-person suitable place to go, something to do, a service or to connect with other travelers while away on business or at a conference? Click below to sign up for our beta.</h4>
+
+    <%= link_to "Home", root_path, 
+                                class: "btn btn-large btn-primary" %>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "Sign Out", destroy_user_session_path, 
+                                class: "btn btn-large btn-primary" %>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "Contact BizRoller", contact_path, 
+                                class: "btn btn-large btn-primary" %>
+
+</div>
 <% else %>
+
+
 
 <div class="center hero-unit">
     <p>
@@ -8,7 +30,7 @@
     <%= image_tag("Bizrollerlogowithtagline.png") %>
 		<!-- <img src="https://s3.amazonaws.com/Bizrollerlogo/Bizrollerlogowithtagline.png" alt="BizRoller - The Business Travelers Community" width="720" height="320"></p> -->
 	
-  <h4>Created by and for Business Travelers, BizRoller is the one place for connecting to other Business Travelers and getting focused reviews on everything from conferences, restaurants, meetings, hotels, sports, theater, entertainment, attractions, performances and support services. Looking for a business-person suitable place to go, something to do, a service or to connect with other travelers while traveling on business or at a conference? Sign-up below to be notified when our beta opens.</h4>
+  <h4>Created by and for Business Travelers, BizRoller is the one place for connecting to other Business Travelers and getting focused reviews on everything from conferences, restaurants, meetings, hotels, sports, theater, entertainment, attractions, performances and support services. Looking for a business-person suitable place to go, something to do, a service or to connect with other travelers while away on business or at a conference? Sign-up below to be notified when our beta opens.</h4>
 
      
 

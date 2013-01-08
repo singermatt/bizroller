@@ -4,6 +4,8 @@ Omrails::Application.routes.draw do
 
   root :to => 'static_pages#home'
 
+  get "signinhome" => "static_pages#signinhome"
+
   get "about" => "static_pages#about"
 
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
