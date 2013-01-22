@@ -12,7 +12,7 @@
  	<%= link_to "Home", root_path, 
                                 class: "btn btn-large btn-primary" %>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<%= link_to "Sign Out", destroy_user_session_path, 
+	<%= link_to "Sign Out", destroy_user_session_path, :method => :delete, 
                                 class: "btn btn-large btn-primary" %>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <%= link_to "Contact BizRoller", contact_path, 
