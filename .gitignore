@@ -18,3 +18,14 @@
 /config/initializers/development_gmail_send_setup_mail.rb
 /config/initializers/production_sendgrid_setup_mail.rb
 # /config/initializers/setup_mail.rb
+
+# Ignore Database Heroku push/pull database blowup
+OLDGemfile
+latest.dump
+push_201301181511.dat
+push_201301181613.dat
+push_201301181827.dat
+push_201301231538.dat
+2013-02-06-git.log
+git.exe.stackdump
+
