@@ -50,8 +50,7 @@ h2 {
 
 h4 {
   line-height: 150%;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 30px;
   text-align:justify;
   font-weight:normal;
 }
@@ -89,3 +88,17 @@ input {
   width: 400px;
 }
 
+.floatleft {
+  margin: 3% 5% 0 5%;
+  float: left;
+  
+}
+
+.floatleftleft {
+  margin: 3% 5% 0 18%;
+  float: left;
+}
+
+.hero-unit {
+padding: 30px 60px 120px;
+}

@@ -8,16 +8,9 @@
 
 </p>
     
-  <h4>Created by and for Business Travelers, BizRoller is the one place for connecting to other Business Travelers and getting focused reviews on everything from conferences, restaurants, meetings, hotels, sports, theater, entertainment, attractions, performances and support services. Looking for a business-person suitable place to go, something to do, a service or to connect with other travelers while away on business or at a conference? Click below to sign up for our beta.</h4>
+  <h4>Created by and for Business Travelers, BizRoller is the one place for connecting to other Business Travelers and getting focused reviews on everything from conferences, restaurants, meetings, hotels, sports, theater, entertainment, attractions, performances and support services. Looking for a business-person suitable place to go, something to do, a service or to connect with other travelers while away on business or at a conference? Stay tuned. Thanks for signing up for our beta.</h4>
 
-    <%= link_to "Home", root_path, 
-                                class: "btn btn-large btn-primary" %>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= link_to "Sign Out", destroy_user_session_path, 
-                                class: "btn btn-large btn-primary" %>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= link_to "Contact BizRoller", contact_path, 
-                                class: "btn btn-large btn-primary" %>
+    <%= link_to "Home", root_path, class: "btn btn-large btn-primary floatleftleft" %><%= link_to "Contact BizRoller", contact_path, class: "btn btn-large btn-primary floatleft" %><%= button_to "Sign Out", destroy_user_session_path, :method => :delete, class: "btn btn-large btn-primary floatleft" %>
 
 </div>
 <% else %>
