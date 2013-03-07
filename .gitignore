@@ -18,6 +18,8 @@
 /config/initializers/development_gmail_send_setup_mail.rb
 /config/initializers/production_sendgrid_setup_mail.rb
 # /config/initializers/setup_mail.rb
+# Ignore Environmental Variables
+/config/local_env.yml
 
 # Ignore Database Heroku push/pull database blowup
 OLDGemfile
