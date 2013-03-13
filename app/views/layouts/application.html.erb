@@ -36,6 +36,7 @@
                         <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
                     <% else %>
                         <li><%= link_to "Sign In", new_user_session_path %></li>
+                        <li><%= link_to (image_tag("signin_with_linkedin.png", :id=>"linkedin_button")), user_omniauth_authorize_path(:linkedin) %></li>
                     <% end %>
                     <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
                     <li><%= link_to "About", about_path %></li>
