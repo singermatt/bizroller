@@ -1,0 +1,625 @@
+# project node.js (1.0) configured on Fri Mar 15 10:15:38 2013 by
+# waf 1.5.16 (abi 7, python 20703f0 on cygwin)
+# using /cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/tools/waf-light --jobs=1 configure
+#
+
+----------------------------------------
+Checking for program g++ or c++
+  find program=['g++', 'c++'] paths=[] var='CXX'
+  -> '/usr/bin/g++'
+
+----------------------------------------
+Checking for program cpp
+  find program=['cpp'] paths=[] var='CPP'
+  -> '/usr/bin/cpp'
+
+----------------------------------------
+Checking for program ar
+  find program=['ar'] paths=[] var='AR'
+  -> '/usr/bin/ar'
+
+----------------------------------------
+Checking for program ranlib
+  find program=['ranlib'] paths=[] var='RANLIB'
+  -> '/usr/bin/ranlib'
+
+----------------------------------------
+Checking for g++ 
+ok 
+
+----------------------------------------
+Checking for program gcc or cc
+  find program=['gcc', 'cc'] paths=[] var='CC'
+  -> '/usr/bin/gcc'
+
+----------------------------------------
+Checking for gcc 
+ok 
+
+----------------------------------------
+Checking for library dl
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/g++', '../test.cpp', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/g++', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-Wl,-Bdynamic', '-ldl']
+yes
+
+----------------------------------------
+Checking for openssl
+pkg-config --errors-to-stdout --print-errors --cflags --libs openssl
+/bin/sh: pkg-config: command not found
+not found
+
+----------------------------------------
+Checking for function SSL_library_init
+==>
+#include <openssl/ssl.h>
+
+	int main() {
+	void *p;
+	p=(void*)(SSL_library_init);
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-L/usr/lib', '-L/usr/local/lib', '-L/opt/local/lib', '-L/usr/sfw/lib', '-Wl,-Bdynamic', '-lssl', '-lcrypto']
+yes
+
+----------------------------------------
+Checking for header openssl/crypto.h
+==>
+#include <openssl/crypto.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-L/usr/lib', '-L/usr/local/lib', '-L/opt/local/lib', '-L/usr/sfw/lib', '-Wl,-Bdynamic', '-lcrypto']
+yes
+
+----------------------------------------
+Checking for library util
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/g++', '-DHAVE_OPENSSL=1', '../test.cpp', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/g++', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-L/usr/lib', '-L/usr/local/lib', '-Wl,-Bdynamic', '-lutil']
+yes
+
+----------------------------------------
+Checking for library rt
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/g++', '-DHAVE_OPENSSL=1', '../test.cpp', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/g++', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-Wl,-Bdynamic', '-lrt']
+yes
+
+----------------------------------------
+Checking for library pthread
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/g++', '-DHAVE_OPENSSL=1', '../test.cpp', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/g++', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-Wl,-Bdynamic', '-lpthread']
+yes
+
+----------------------------------------
+Checking for function pthread_create
+==>
+#include <pthread.h>
+
+	int main() {
+	void *p;
+	p=(void*)(pthread_create);
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-Wl,-Bdynamic', '-lpthread']
+yes
+
+----------------------------------------
+Checking for function pthread_atfork
+==>
+#include <unistd.h>
+
+	int main() {
+	void *p;
+	p=(void*)(pthread_atfork);
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-Wl,-Bdynamic', '-lpthread']
+yes
+
+----------------------------------------
+Checking for futimes(2)
+==>
+
+    #include <sys/types.h>
+    #include <sys/time.h>
+    #include <utime.h>
+    struct timeval tv[2];
+    int res;
+    int fd;
+    int main(void)
+    {
+       res = futimes (fd, tv);
+       return 0;
+    }
+  
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import']
+yes
+
+----------------------------------------
+Checking for readahead(2)
+==>
+
+    #include <fcntl.h>
+    int main(void)
+    {
+       int fd = 0;
+       size_t count = 2;
+       ssize_t res;
+       res = readahead (fd, 0, count);
+       return 0;
+    }
+  
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0mdefault/test_1.o:test.c:(.text+0x36): undefined reference to `_readahead'
+collect2: ld returned 1 exit status
+['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cc_link test_1.o -> testprog.exe}'no
+
+----------------------------------------
+Checking for fdatasync(2)
+==>
+
+    #include <unistd.h>
+    int main(void)
+    {
+       int fd = 0;
+       fdatasync (fd);
+       return 0;
+    }
+  
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import']
+yes
+
+----------------------------------------
+Checking for pread(2) and pwrite(2)
+==>
+
+    #include <unistd.h>
+    int main(void)
+    {
+       int fd = 0;
+       size_t count = 1;
+       char buf;
+       off_t offset = 1;
+       ssize_t res;
+       res = pread (fd, &buf, count, offset);
+       res = pwrite (fd, &buf, count, offset);
+       return 0;
+    }
+  
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import']
+yes
+
+----------------------------------------
+Checking for sendfile(2)
+==>
+ 
+    # include <sys/types.h>
+    #if __linux
+    # include <sys/sendfile.h>
+    #elif __FreeBSD__ || defined(__APPLE__)
+    # include <sys/socket.h>
+    # include <sys/uio.h>
+    #elif __hpux
+    # include <sys/socket.h>
+    #else
+    # error unsupported architecture
+    #endif
+    int main(void)
+    {
+       int fd = 0;
+       off_t offset = 1;
+       size_t count = 2;
+       ssize_t res;
+    #if __linux
+       res = sendfile (fd, fd, offset, count);
+    #elif __FreeBSD__
+       res = sendfile (fd, fd, offset, count, 0, &offset, 0);
+    #elif __APPLE__
+       res = sendfile (fd, fd, offset, &offset, 0, 0);
+    #elif __hpux
+       res = sendfile (fd, fd, offset, count, 0, 0);
+    #endif
+       return 0;
+    }
+  
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m../test.c:11:7: error: #error unsupported architecture
+['/usr/bin/gcc', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cc test.c -> test_1.o}'no
+
+----------------------------------------
+Checking for sync_file_range(2) 
+==>
+
+    #include <fcntl.h>
+    int main(void)
+    {
+       int fd = 0;
+       off64_t offset = 1;
+       off64_t nbytes = 1;
+       unsigned int flags = SYNC_FILE_RANGE_WAIT_BEFORE|SYNC_FILE_RANGE_WRITE|SYNC_FILE_RANGE_WAIT_AFTER;
+       ssize_t res;
+       res = sync_file_range (fd, offset, nbytes, flags);
+       return 0;
+    }
+  
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m../test.c: In function ‘main’:
+../test.c:6:8: error: ‘off64_t’ undeclared (first use in this function)
+../test.c:6:8: note: each undeclared identifier is reported only once for each function it appears in
+../test.c:6:16: error: expected ‘;’ before ‘offset’
+../test.c:7:16: error: expected ‘;’ before ‘nbytes’
+../test.c:8:29: error: ‘SYNC_FILE_RANGE_WAIT_BEFORE’ undeclared (first use in this function)
+../test.c:8:57: error: ‘SYNC_FILE_RANGE_WRITE’ undeclared (first use in this function)
+../test.c:8:79: error: ‘SYNC_FILE_RANGE_WAIT_AFTER’ undeclared (first use in this function)
+../test.c:10:35: error: ‘offset’ undeclared (first use in this function)
+../test.c:10:43: error: ‘nbytes’ undeclared (first use in this function)
+['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cc test.c -> test_1.o}'no
+
+----------------------------------------
+Checking for header sys/inotify.h
+==>
+#include <sys/inotify.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m../test.c:1:25: fatal error: sys/inotify.h: No such file or directory
+compilation terminated.
+['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cc test.c -> test_1.o}'not found
+
+----------------------------------------
+Checking for header sys/epoll.h
+==>
+#include <sys/epoll.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m../test.c:1:23: fatal error: sys/epoll.h: No such file or directory
+compilation terminated.
+['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cc test.c -> test_1.o}'not found
+
+----------------------------------------
+Checking for header port.h
+==>
+#include <port.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m../test.c:1:18: fatal error: port.h: No such file or directory
+compilation terminated.
+['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cc test.c -> test_1.o}'not found
+
+----------------------------------------
+Checking for header poll.h
+==>
+#include <poll.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import']
+yes
+
+----------------------------------------
+Checking for function poll
+==>
+#include <poll.h>
+
+	int main() {
+	void *p;
+	p=(void*)(poll);
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import']
+yes
+
+--------------------------------------------------
+Checking for header ['sys/types.h', 'sys/event.h']
+==>
+#include <sys/types.h>
+#include <sys/event.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m../test.c:2:23: fatal error: sys/event.h: No such file or directory
+compilation terminated.
+['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cc test.c -> test_1.o}'not found
+
+--------------------------------------------------
+Checking for header sys/queue.h
+==>
+#include <sys/queue.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import']
+yes
+
+--------------------------------------------------
+Checking for function kqueue
+==>
+#include <sys/queue.h>
+
+	int main() {
+	void *p;
+	p=(void*)(kqueue);
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m../test.c: In function ‘main’:
+../test.c:5:12: error: ‘kqueue’ undeclared (first use in this function)
+../test.c:5:12: note: each undeclared identifier is reported only once for each function it appears in
+['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cc test.c -> test_1.o}'not found
+
+--------------------------------------------------
+Checking for header sys/select.h
+==>
+#include <sys/select.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import']
+yes
+
+--------------------------------------------------
+Checking for function select
+==>
+#include <sys/select.h>
+
+	int main() {
+	void *p;
+	p=(void*)(select);
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import']
+yes
+
+--------------------------------------------------
+Checking for header sys/eventfd.h
+==>
+#include <sys/eventfd.h>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m../test.c:1:25: fatal error: sys/eventfd.h: No such file or directory
+compilation terminated.
+['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cc test.c -> test_1.o}'not found
+
+--------------------------------------------------
+Checking for SYS_clock_gettime
+==>
+
+      #include <syscall.h>
+      #include <time.h>
+      #include <stdio.h>
+
+      int main() {
+          struct timespec ts; 
+          int status = syscall(SYS_clock_gettime, CLOCK_REALTIME, &ts);
+          return 0;
+      }
+  
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m../test.c:2:27: fatal error: syscall.h: No such file or directory
+compilation terminated.
+['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+command returned 'Build failed:  -> task failed (err #1): \n\t{task: cc test.c -> test_1.o}'no
+
+--------------------------------------------------
+Checking for library rt
+==>
+
+int main() {
+	return 0;
+}
+
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/g++', '-DHAVE_OPENSSL=1', '../test.cpp', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/g++', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-Wl,-Bdynamic', '-lrt']
+yes
+
+--------------------------------------------------
+Checking for function clock_gettime
+==>
+#include <time.h>
+
+	int main() {
+	void *p;
+	p=(void*)(clock_gettime);
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-Wl,-Bdynamic', '-lrt']
+yes
+
+--------------------------------------------------
+Checking for function nanosleep
+==>
+#include <time.h>
+
+	int main() {
+	void *p;
+	p=(void*)(nanosleep);
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-Wl,-Bdynamic', '-lrt']
+yes
+
+--------------------------------------------------
+Checking for function ceil
+==>
+#include <math.h>
+
+	int main() {
+	void *p;
+	p=(void*)(ceil);
+	return 0;
+}
+
+<==
+[1/2] [32mcc: build/.conf_check_0/test.c -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/gcc', '-D_GNU_SOURCE', '-DHAVE_CONFIG_H=1', '-DHAVE_OPENSSL=1', '../test.c', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcc_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/gcc', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-Wl,-Bdynamic', '-lm']
+yes
+
+--------------------------------------------------
+Checking for fdatasync(2) with c++
+==>
+
+    #include <unistd.h>
+    int main(void)
+    {
+       int fd = 0;
+       fdatasync (fd);
+       return 0;
+    }
+  
+<==
+[1/2] [32mcxx: build/.conf_check_0/test.cpp -> build/.conf_check_0/testbuild/default/test_1.o
+[0m['/usr/bin/g++', '-m32', '-DHAVE_OPENSSL=1', '-DEV_FORK_ENABLE=0', '-DEV_EMBED_ENABLE=0', '-DEV_MULTIPLICITY=0', '-DX_STACKSIZE=65536', '-D_LARGEFILE_SOURCE', '-D_FILE_OFFSET_BITS=64', '-DEV_MULTIPLICITY=0', '../test.cpp', '-c', '-o', 'default/test_1.o']
+[2/2] [33mcxx_link: build/.conf_check_0/testbuild/default/test_1.o -> build/.conf_check_0/testbuild/default/testprog.exe
+[0m['/usr/bin/g++', 'default/test_1.o', '-o', '/cygdrive/c/cygwin/Ruby-Projects/omrails/node-v0.4.12/build/.conf_check_0/testbuild/default/testprog.exe', '-Wl,--enable-auto-import', '-Wl,--enable-auto-import', '-m32']
+yes
