@@ -21,9 +21,9 @@ class User < ActiveRecord::Base
       user.last_name = auth.info.last_name
       user.location = auth.info.location
       user.description = auth.info.description
-   #  user.image = auth.info.image
-   #   user.headline = auth.info.headline
-   #   user.industry = auth.info.industry
+      user.image = auth.info.image
+      user.headline = auth.info.headline
+      user.industry = auth.info.industry
    #   user.public_profile = auth.info.urls.public_profile
   	end
   end
