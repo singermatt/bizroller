@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
       user.image = auth.info.image
       user.headline = auth.info.headline
       user.industry = auth.info.industry
-   #   user.public_profile = auth.info.urls.public_profile
+      user.public_profile = auth.info.urls.public_profile
   	end
   end
   def self.new_with_session(params, session)
