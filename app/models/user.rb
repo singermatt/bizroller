@@ -20,11 +20,11 @@ class User < ActiveRecord::Base
       user.first_name = auth.info.first_name
       user.last_name = auth.info.last_name
       user.location = auth.info.location
-      user.description = auth.info.description
-      user.image = auth.info.image
-      user.headline = auth.info.headline
-      user.industry = auth.info.industry
-      user.public_profile = auth.info.urls.public_profile
+   #   user.description = auth.info.description
+   #  user.image = auth.info.image
+   #   user.headline = auth.info.headline
+   #   user.industry = auth.info.industry
+   #   user.public_profile = auth.info.urls.public_profile
   	end
   end
   def self.new_with_session(params, session)
