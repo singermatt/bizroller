@@ -9,6 +9,13 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
+  after_save :send_welcome_email, :if => proc { |l| l.confirmed_at_changed? && l.confirmed_at_was.nil? }
+
+  def send_welcome_email
+     @user = self
+     SignupMailer.signup_confirmation(@user).deliver
+   end
+
   def self.from_omniauth(auth)
    	where(auth.slice(:provider, :uid)).first_or_create do |user|
       user.skip_confirmation! 
