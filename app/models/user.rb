@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
       user.industry = auth.info.industry
       user.public_profile = auth.info.urls.public_profile
   	end
+        
   end
   def self.new_with_session(params, session)
     if session["devise.user_attributes"]
