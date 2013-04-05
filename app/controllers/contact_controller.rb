@@ -3,7 +3,6 @@ class ContactController < ApplicationController
   def new
     @message = Message.new
   end
-
   def create
     @message = Message.new(params[:message])
     
@@ -22,9 +21,6 @@ class ContactController < ApplicationController
       flash.now[:alert] = "There was an error with the recaptcha code below. Please re-enter the code."
       render :new
     end
-
-
-
   end
 
 end
