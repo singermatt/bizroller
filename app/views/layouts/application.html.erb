@@ -30,17 +30,25 @@
 
               <nav>
                 <ul class="nav pull-right">
-                    <li><%= link_to "Home", root_path %></li>
+                    <li><%= link_to "Home", root_path, :class => "menu-pad" %></li>
+                    <li class="divider">|</li>
                     <% if user_signed_in? %>
-                        <li id="sia">Signed in as <strong><%= current_user.email %></strong></li>
-                        <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+                        <li id="sia" class="menu-pad">Signed in as <strong><%= current_user.email %></strong></li>
+                        <li class="divider">|</li>
+                        <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "menu-pad" %></li>
+                        <li class="divider">|</li>
                     <% else %>
-                        <li><%= link_to "Sign In", new_user_session_path %></li>
-                        <li><%= link_to (image_tag("signin_with_linkedin.png", :id=>"linkedin_button")), user_omniauth_authorize_path(:linkedin) %></li>
+                        <li><%= link_to (image_tag("signin_with_linkedin.png" )), user_omniauth_authorize_path(:linkedin), :class => "menu-pad" %></li>
+                        <li class="divider">|</li>
+                        <li><%= link_to "Sign In", new_user_session_path, :class => "menu-pad" %></li>
+                        <li class="divider">|</li>
                     <% end %>
-                    <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-                    <li><%= link_to "About", about_path %></li>
-                    <li><%= link_to "Contact", contact_path %></li>
+                    <li><%= link_to "Edit Profile", edit_user_registration_path, :class => "menu-pad" %></li>
+                    <li class="divider">|</li>
+                    <li><%= link_to "About", about_path, :class => "menu-pad" %></li>
+                    <li class="divider">|</li>
+                    <li><%= link_to "Contact", contact_path, :class => "menu-pad" %></li>
+                    <li><%= link_to (image_tag("twitter-button-35.png" )), "https://twitter.com/BizRoller", :class => "twitter-button" %></li>
                 </ul>
               </nav>
             </div>
