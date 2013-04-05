@@ -14,7 +14,9 @@
             Looking to connect with other travelers or meet prospective customers while away on business? Seeking something interesting to see? In need of a service to make your travel easier? Stay tuned. Thanks for signing up for our beta.</h4>
         </div>
 
-        <%= link_to "Home", root_path, class: "btn btn-large btn-primary floatleftleft" %><%= link_to "Contact BizRoller", contact_path, class: "btn btn-large btn-primary floatleft" %><%= button_to "Sign Out", destroy_user_session_path, :method => :delete, class: "btn btn-large btn-primary floatleft" %>
+        <%= link_to "Home", root_path, class: "btn btn-primary floatleftleft" %>
+        <%= link_to "Contact BizRoller", contact_path, class: "btn btn-primary floatleft" %>
+        <%= button_to "Sign Out", destroy_user_session_path, :method => :delete, class: "btn btn-primary floatleft" %>
 
     </div>
 <% else %>

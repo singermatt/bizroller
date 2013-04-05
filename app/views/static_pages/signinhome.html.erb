@@ -1,18 +1,19 @@
 
-    <div class="center hero-unit">
+ <div class="center center-tight">
         <p>
-        	<%= image_tag("Bizrollerlogowithtagline.png") %>
-
-        	<!--	<img src="http://www.bizroller.com/wp-content/uploads/2012/12/cropped-Bizroller-logo-tagline-website-header.png" alt="BizRoller - The Business Travelers Community" width="720" height="320" align="middle"> -->
-
+            <a><%= link_to (image_tag("Bizrollerlogowithtagline.png")) %></a>
         </p>
-        	
-          <h4>Created by and for business travelers, BizRoller is the place to connect with other business travelers and get focused reviews on everything from meetings and conferences to hotels, restaurants, attractions and support services. <br><br>
+            
+        <div style="background-color: #F0F8FF; border: 1px solid #ADD8E6; padding: 8px 14px 8px 14px; border-radius: 4px;">
+            <h4>Created by and for business travelers, BizRoller is the place to connect with other business travelers and get focused reviews on everything from meetings and conferences to hotels, restaurants, attractions and support services. <br><br>
 
-Looking to connect with other travelers while away on business? Seeking something interesting to see? In need of a service to make your travel easier? Stay tuned. Thanks for signing up for our beta.</h4>
+            Looking to connect with other travelers or meet prospective customers while away on business? Seeking something interesting to see? In need of a service to make your travel easier? Stay tuned. Thanks for signing up for our beta.</h4>
+        </div>
 
          	
-                <%= link_to "Home", root_path, class: "btn btn-large btn-primary floatleftleft" %><%= link_to "Contact BizRoller", contact_path, class: "btn btn-large btn-primary floatleft" %><%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: "btn btn-large btn-primary floatleft" %>
+        <%= link_to "Home", root_path, class: "btn btn-primary floatcenter" %>
+        <%= link_to "Contact BizRoller", contact_path, class: "btn btn-primary floatcenter" %>
+        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: "btn btn-primary floatcenter" %>
                 
     </div>
 
