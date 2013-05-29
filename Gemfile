@@ -4,13 +4,14 @@ gem 'rails', '3.2.11'
 gem 'bootstrap-sass'
 gem 'devise'
 gem "recaptcha", :require => "recaptcha/rails"
+# gem 'rb-readline', '~> 0.4.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
- 	gem 'sqlite3'
-end
+# group :development do
+	gem 'sqlite3'
+# end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,9 +27,9 @@ end
 
 gem 'jquery-rails'
 
-group :production do
-	gem 'pg'
-end
+# group :production do
+	gem 'pg', '0.14.1'
+# end
 
 gem 'omniauth'
 gem 'omniauth-linkedin'

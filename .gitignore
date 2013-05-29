@@ -34,4 +34,15 @@ v3.2
 OLDGemfilelock
 push_201302130846.dat
 
+OLD2Gemfilelock
+OLDIIGemfile
+OLDIIGemfilelock
+bash.exe.stackdump
+config/postgresql-database.yml
+db/OLDschema.rb
+psql.exe.stackdump
+tail.exe.stackdump
+config/postgrSQLdatabaseyml
+ruby.exe.stackdump
+
 
