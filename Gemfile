@@ -9,9 +9,9 @@ gem "recaptcha", :require => "recaptcha/rails"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-# group :development do
+group :development do
 	gem 'sqlite3'
-# end
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -27,9 +27,9 @@ end
 
 gem 'jquery-rails'
 
-# group :production do
+group :production do
 	gem 'pg', '0.14.1'
-# end
+end
 
 gem 'omniauth'
 gem 'omniauth-linkedin'
