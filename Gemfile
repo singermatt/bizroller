@@ -5,7 +5,7 @@ gem 'rails', '3.2.11'
 gem 'bootstrap-sass'
 gem 'devise'
 gem "recaptcha", :require => "recaptcha/rails"
-# gem 'rb-readline', '~> 0.4.2'
+# gem 'rb-readline'#, '~> 0.4.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
