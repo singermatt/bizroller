@@ -28,10 +28,9 @@ end
 
 gem 'jquery-rails'
 
-# group :production do
-	gem 'pg', '0.14.1'
-# end
+gem 'rails_12factor', group: :production
 
+gem 'pg', '0.14.1'
 gem 'omniauth'
 gem 'omniauth-linkedin'
 
