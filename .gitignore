@@ -43,6 +43,8 @@ db/OLDschema.rb
 psql.exe.stackdump
 tail.exe.stackdump
 config/postgrSQLdatabaseyml
+config/SQLitedatabaseyml
 ruby.exe.stackdump
+logfile
 
 
