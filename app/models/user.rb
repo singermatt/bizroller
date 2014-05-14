@@ -32,6 +32,16 @@ class User < ActiveRecord::Base
       user.headline = auth.info.headline
       user.industry = auth.info.industry
       user.public_profile = auth.info.urls.public_profile
+      user.num_connections = auth.extra.raw_info.numConnections
+      user.current_position_industry_1 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][0]["company"]["industry"]
+      user.current_position_company_name_1 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][0]["company"]["name"]
+      user.current_position_title_1 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][0]["title"]
+      user.current_position_industry_2 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][1]["company"]["industry"]
+      user.current_position_company_name_2 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][1]["company"]["name"]
+      user.current_position_title_2 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][1]["title"]
+      user.current_position_industry_3 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][2]["company"]["industry"]
+      user.current_position_company_name_3 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][2]["company"]["name"]
+      user.current_position_title_3 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][2]["title"]
   	end
         
   end
