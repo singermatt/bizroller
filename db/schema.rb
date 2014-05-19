@@ -11,21 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130317171628) do
+ActiveRecord::Schema.define(:version => 20140514195939) do
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "email",                           :default => "", :null => false
+    t.string   "encrypted_password",              :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
+    t.integer  "sign_in_count",                   :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
@@ -42,6 +42,16 @@ ActiveRecord::Schema.define(:version => 20130317171628) do
     t.text     "headline"
     t.string   "industry"
     t.string   "public_profile"
+    t.integer  "num_connections"
+    t.text     "current_position_industry_1"
+    t.text     "current_position_company_name_1"
+    t.text     "current_position_title_1"
+    t.text     "current_position_industry_2"
+    t.text     "current_position_company_name_2"
+    t.text     "current_position_title_2"
+    t.text     "current_position_industry_3"
+    t.text     "current_position_company_name_3"
+    t.text     "current_position_title_3"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
