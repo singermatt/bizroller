@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140514195939) do
+ActiveRecord::Schema.define(:version => 20140521152134) do
 
   create_table "users", :force => true do |t|
     t.string   "email",                           :default => "", :null => false
@@ -52,6 +52,15 @@ ActiveRecord::Schema.define(:version => 20140514195939) do
     t.text     "current_position_industry_3"
     t.text     "current_position_company_name_3"
     t.text     "current_position_title_3"
+    t.text     "past_position_industry_1"
+    t.text     "past_position_company_name_1"
+    t.text     "past_position_title_1"
+    t.text     "past_position_industry_2"
+    t.text     "past_position_company_name_2"
+    t.text     "past_position_title_2"
+    t.text     "past_position_industry_3"
+    t.text     "past_position_company_name_3"
+    t.text     "past_position_title_3"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

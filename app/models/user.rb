@@ -42,6 +42,17 @@ class User < ActiveRecord::Base
       user.current_position_industry_3 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][2]["company"]["industry"] rescue " "
       user.current_position_company_name_3 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][2]["company"]["name"] rescue " "
       user.current_position_title_3 = auth["extra"]["raw_info"]["threeCurrentPositions"]["values"][2]["title"] rescue " "
+
+      user.past_position_industry_1 = auth["extra"]["raw_info"]["threePastPositions"]["values"][0]["company"]["industry"] rescue " "
+      user.past_position_company_name_1 = auth["extra"]["raw_info"]["threePastPositions"]["values"][0]["company"]["name"] rescue " "
+      user.past_position_title_1 = auth["extra"]["raw_info"]["threePastPositions"]["values"][0]["title"] rescue " "
+      user.past_position_industry_2 = auth["extra"]["raw_info"]["threePastPositions"]["values"][1]["company"]["industry"] rescue " "
+      user.past_position_company_name_2 = auth["extra"]["raw_info"]["threePastPositions"]["values"][1]["company"]["name"] rescue " "
+      user.past_position_title_2 = auth["extra"]["raw_info"]["threePastPositions"]["values"][1]["title"] rescue " "
+      user.past_position_industry_3 = auth["extra"]["raw_info"]["threePastPositions"]["values"][2]["company"]["industry"] rescue " "
+      user.past_position_company_name_3 = auth["extra"]["raw_info"]["threePastPositions"]["values"][2]["company"]["name"] rescue " "
+      user.past_position_title_3 = auth["extra"]["raw_info"]["threePastPositions"]["values"][2]["title"] rescue " "
+
   	end
         
   end
